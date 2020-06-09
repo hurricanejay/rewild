@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 Plant.create(name: 'spider', description: 'hanging', watering: 'a lot', light: 'bright', price: 100)
+Plant.create(name: 'fern', description: 'big', watering: 'a little', light: 'shade', price: 19)
 User.create(username: 'user', password: '123')
 UserPlant.create(plant_id: 1, user_id: 1)
 Cart.create(plant_id: 1, user_id: 1, quantity: 3)
