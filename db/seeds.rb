@@ -15,5 +15,5 @@ User.destroy_all
 Plant.create(name: 'spider', description: 'hanging', watering: 'a lot', light: 'bright', price: 100)
 Plant.create(name: 'fern', description: 'big', watering: 'a little', light: 'shade', price: 19)
 User.create(username: 'user', password: '123')
-UserPlant.create(plant_id: 1, user_id: 1)
-Cart.create(plant_id: 1, user_id: 1, quantity: 3)
+UserPlant.create(plant_id: Plant.first.id, user_id: User.first.id)
+Cart.create(plant_id: Plant.first.id, user_id: User.first.id, quantity: 3)
