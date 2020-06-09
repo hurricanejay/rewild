@@ -6,6 +6,12 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+Plant.destroy_all
+UserPlant.destroy_all
+Cart.destroy_all
+User.destroy_all
+
+
 Plant.create(name: 'spider', description: 'hanging', watering: 'a lot', light: 'bright', price: 100)
 Plant.create(name: 'fern', description: 'big', watering: 'a little', light: 'shade', price: 19)
 User.create(username: 'user', password: '123')
