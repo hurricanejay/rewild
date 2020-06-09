@@ -16,8 +16,8 @@ ActiveRecord::Schema.define(version: 5) do
   enable_extension "plpgsql"
 
   create_table "carts", force: :cascade do |t|
-    t.string "plant_id"
-    t.string "user_id"
+    t.integer "plant_id"
+    t.integer "user_id"
     t.integer "quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
