@@ -5,6 +5,6 @@ class Plant < ApplicationRecord
     has_many :users, through: :user_plants
 
     def user_order
-        return self.carts.map{|cart| cart.plant}
+        return self.carts.map{|cart| cart.user}
     end
 end
