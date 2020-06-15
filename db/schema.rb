@@ -49,8 +49,10 @@ ActiveRecord::Schema.define(version: 5) do
 
   create_table "waterings", force: :cascade do |t|
     t.integer "plant_id"
+    t.integer "user_plant_id"
     t.datetime "date"
     t.integer "amount"
+    t.integer "frequency"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
