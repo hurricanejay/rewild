@@ -12,9 +12,9 @@ Cart.destroy_all
 User.destroy_all
 Watering.destroy_all
 
-Plant.create(name: 'spider', description: 'hanging', watering: 'a lot', light: 'bright', price: 100)
-Plant.create(name: 'fern', description: 'big', watering: 'a little', light: 'shade', price: 19)
+Plant.create(name: 'spider', description: 'hanging', amount: 2, frequency: 5, light: 'bright', price: 100, image: "https://www.clipartmax.com/png/middle/91-911344_round-potted-plant-import-spider-plant-transparent-background.png")
+Plant.create(name: 'fern', description: 'big', amount: 2, frequency: 2,light: 'shade', price: 19, image: "https://i.pinimg.com/originals/44/d8/58/44d8586ae81122a171706867dd27ebe5.png")
 User.create(username: 'user', password: '123')
 UserPlant.create(plant_id: Plant.first.id, user_id: User.first.id)
 Cart.create(plant_id: Plant.first.id, user_id: User.first.id, quantity: 3)
-Watering.create(cart_id: Cart.first.id, date: Time.now, amount: 2, frequency: 5)
+Watering.create(user_plant_id: UserPlant.first.id, date: Time.now, amount: 2)

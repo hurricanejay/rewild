@@ -26,9 +26,11 @@ ActiveRecord::Schema.define(version: 5) do
   create_table "plants", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.string "watering"
+    t.integer "amount"
+    t.integer "frequency"
     t.string "light"
     t.integer "price"
+    t.string "image"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -48,11 +50,9 @@ ActiveRecord::Schema.define(version: 5) do
   end
 
   create_table "waterings", force: :cascade do |t|
-    t.integer "plant_id"
     t.integer "user_plant_id"
     t.datetime "date"
     t.integer "amount"
-    t.integer "frequency"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

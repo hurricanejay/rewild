@@ -3,9 +3,11 @@ class CreatePlants < ActiveRecord::Migration[6.0]
     create_table :plants do |t|
       t.string :name
       t.string :description
-      t.string :watering
+      t.integer :amount
+      t.integer :frequency
       t.string :light
       t.integer :price
+      t.string :image
 
       t.timestamps
     end

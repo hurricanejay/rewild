@@ -1,7 +1,6 @@
 class Plant < ApplicationRecord
     has_many :carts
     has_many :user_plants
-    has_one :watering
 
     has_many :users, through: :user_plants
 
