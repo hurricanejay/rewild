@@ -31,14 +31,14 @@ UserPlant.create(plant_id: Plant.third.id, user_id: User.first.id)
 
 UserPlant.create(plant_id: Plant.first.id, user_id: User.second.id)
 UserPlant.create(plant_id: Plant.last.id, user_id: User.second.id)
-
 UserPlant.create(plant_id: Plant.last.id, user_id: User.last.id)
+UserPlant.create(plant_id: Plant.second.id, user_id: User.first.id)
+
 
 
 Cart.create(plant_id: Plant.first.id, user_id: User.first.id, quantity: 3)
 Cart.create(plant_id: Plant.second.id, user_id: User.first.id, quantity: 1)
 Cart.create(plant_id: Plant.last.id, user_id: User.first.id, quantity: 1)
-
 Cart.create(plant_id: Plant.first.id, user_id: User.last.id, quantity: 3)
 
 Watering.create(user_plant_id: UserPlant.second.id, date: Time.now, amount: 3)
