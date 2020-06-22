@@ -1,6 +1,7 @@
 class User < ApplicationRecord
+    validates :username, uniqueness: true
     has_secure_password
-    
+
     has_many :carts
     has_many :user_plants
 
