@@ -24,3 +24,8 @@ class UserPlantsController < ApplicationController
         params.require(:user_plant).permit(:plant_id, :user_id)
     end
 end
+Resouce.select("resources.*, COUNT(votes.id) vote_count")
+                    .joins(:votes)
+                    .where(language_id: "ruby")
+                    .group("resources.id")
+                    .order("vote_count DESC")
