@@ -21,10 +21,10 @@ p6 = Plant.create(name: 'snake plant', description: 'tall and low maintence', am
 p7 = Plant.create(name: 'bird nest fern', description: 'fern', amount: 1, frequency: 1,light: 'partial shade', price: 30, image: "https://bloomscape.com/wp-content/uploads/2019/05/bloomscape_product-ponytail-palm-stone-3-1140x1382.jpg?ver=28713")
 
 
-u1 = User.create(username: 'user', password: '123')
-u2 = User.create(username: 'user2', password: '123')
-u3 = User.create(username: 'user3', password: '123')
-u4 = User.create(username: 'user4', password: '123')
+u1 = User.create(username: 'user', password: '123', email: 'test@me.com')
+u2 = User.create(username: 'user2', password: '123', email: 'test2@me.com' )
+u3 = User.create(username: 'user3', password: '123', email: 'yaho@me.com')
+u4 = User.create(username: 'user4', password: '123', email: 'hello@me.com')
 
 
 up1 = UserPlant.create(plant_id: p1.id, user_id: User.first.id)
