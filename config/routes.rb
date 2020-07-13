@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/user_plants/:id', to: 'user_plants#show'
   post '/user_plants', to: 'user_plants#create'
   get '/user_plants/my_plants/:user_id', to: 'user_plants#my_plants' #Get all plants for a user
+  get '/user_plants/watering/:id' to: 'user_plants#watering'
 
   get '/carts', to: 'carts#index'
   get '/carts/:id', to: 'carts#show'

@@ -20,6 +20,12 @@ class UserPlantsController < ApplicationController
         render json: user_plants
     end
 
+    def user_plant_watering
+        user_plant_watering = Watering.create(user_plant_id: params[:id], date: params[:date])
+        render json: user_plant_watering
+    end
+
+
     private def user_plant_params
         params.require(:user_plant).permit(:plant_id, :user_id)
     end
