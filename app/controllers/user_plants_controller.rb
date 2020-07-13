@@ -16,7 +16,7 @@ class UserPlantsController < ApplicationController
     end
 
     def my_plants
-        user_plants = UserPlant.find(user_id: params[:user_id])
+        user_plants = UserPlant.where(user_id: params[:user_id])
         render json: user_plants
     end
 
