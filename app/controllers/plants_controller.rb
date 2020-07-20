@@ -14,4 +14,10 @@ class PlantsController < ApplicationController
         plants = Hash[UserPlant.group(:plant_id).count.sort_by{|k, v| -v}.first(3)].keys.map{|id| Plant.find(id)}
         render json: plants
     end
+
+    def search 
+        plants = Plant.where("name like ?", "%#{params[:plant_name]}%")
+        render json:plants
+    end
+
 end
